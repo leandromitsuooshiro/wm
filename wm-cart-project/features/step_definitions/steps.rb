@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 Dado(/^que visito a pagina do walmart$/) do
   visit 'https://www.walmart.com.br'
 end

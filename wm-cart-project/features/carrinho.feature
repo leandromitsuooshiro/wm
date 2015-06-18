@@ -1,4 +1,4 @@
-# language :pt
+# language: pt
 
 Funcionalidade: Adicionar produto
 
