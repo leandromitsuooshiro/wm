@@ -1,40 +1,41 @@
 Dado(/^que visito a pagina do walmart$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit 'https://www.walmart.com.br'
 end
 
 Dado(/^busco pela palavra tv$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in 'suggestion-search', with=> "tv"
+  click_button 'Procurar'
 end
 
 Quando(/^sistema exibe os resulados$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content 'Resultados de busca para "tv"'
 end
 
 Quando(/^clico em um produto$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  click_link('TV LED 40” Samsung 40H5100 Full HD Função Futebol ConnectShare Movie')
 end
 
 Entao(/^sistema exibe os detalhes do produto$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content 'TV LED 40” Samsung 40H5100 Full HD Função Futebol ConnectShare Movie'
 end
 
 Entao(/^clico no botão adicionar ao carrinho$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  click_button 'Adicionar ao carrinho'
 end
 
 Entao(/^clico no radion button sem garantia estendida$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  choose ('warranty')
 end
 
 Entao(/^clino no botão continuar$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  click_button 'Continuar'
 end
 
 Então(/^clico no botão do carrinho$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  find ('cart-link').click
 end
 
 Então(/^sistema exibe o produto selecionado$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content 'TV LED 40” Samsung 40H5100 Full HD Função Futebol ConnectShare Movie'
 end
 
